@@ -21,6 +21,8 @@
         pokedexBtn.addEventListener('click', async ()=>{
 
           const response = await fetch("/.netlify/functions/pokedex").then(res => res.json());
+          console.log(response);
+          responseText.innerText = JSON.stringify(response);
         })
 
 
